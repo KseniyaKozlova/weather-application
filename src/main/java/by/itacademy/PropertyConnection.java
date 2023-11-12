@@ -7,9 +7,10 @@ import java.util.Properties;
 public class PropertyConnection {
 
     private static final String WEATHER_URI = "service.weather.uri";
+    private static final String PROPERTIES_FILE = "service.weather.uri";
     
     public String getProperty() {
-        try (InputStream inputStream = PropertyConnection.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream inputStream = PropertyConnection.class.getClassLoader().getResourceAsStream(PROPERTIES_FILE)) {
 
             final Properties properties = new Properties();
             properties.load(inputStream);
