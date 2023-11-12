@@ -15,6 +15,7 @@ public class PropertyConnection {
             final Properties properties = new Properties();
             properties.load(inputStream);
 
+            System.out.println("not main");
             return properties.getProperty(WEATHER_URI);
         } catch (IOException e) {
             throw new RuntimeException("Problem with file reading", e);
