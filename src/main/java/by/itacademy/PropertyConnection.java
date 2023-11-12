@@ -10,7 +10,7 @@ public class PropertyConnection {
     private static final String PROPERTIES_NAME = "config.properties";
 
     public String getProperty() {
-        try (InputStream inputStream = PropertyConnection.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream inputStream = PropertyConnection.class.getClassLoader().getResourceAsStream(PROPERTIES_NAME)) {
 
             final Properties properties = new Properties();
             properties.load(inputStream);
